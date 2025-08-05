@@ -2,8 +2,10 @@ from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 import predict
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:3001"])
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  # 10 MB limit
 
