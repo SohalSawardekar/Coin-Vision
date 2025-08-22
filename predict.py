@@ -41,3 +41,4 @@ def load_and_predict(image_path: str) -> dict:
     except Exception as e:
         print(f"[ERROR] Exception occurred: {str(e)}")
         return {"status": "error", "message": str(e)}
+
